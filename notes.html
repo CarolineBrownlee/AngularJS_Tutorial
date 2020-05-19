@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html>
+<!-- AngularJS is distributed as a JavaScript file, and can be added to a web page with a script tag: -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body>
 
     
-    <div ng-app="">
+    <!-- <div ng-app=""> -->
         
     <!-- DIRECTIVES -->
     <!-- ng-init directive initializes AngularJS application variables -->
-    <div ng-init="firstName='John'">
-        <p>The name is <span ng-bind="firstName"></span></p>
+    <!-- <div ng-init="firstName='John'">
+        <p>The name is <span ng-bind="firstName"></span></p> -->
         <!-- output:  The name is John -->
-    </div>
+    <!-- </div> -->
 
     <!-- EXPRESSIONS -->
-    <div>
+    <!-- <div> -->
         <!-- Written inside of double braces -->
-        <p>My first expression: {{ 5 + 5 }}</p>
+        <!-- <p>My first expression: {{ 5 + 5 }}</p> -->
         <!-- output:  My first expression: 10 -->
 
         <!-- They bind AngularJS data to HTML the same way as the ng-bind directive -->
-        <p>Name: <input type="text" ng-model="name"></p>
+        <!-- <p>Name: <input type="text" ng-model="name"></p>
         <p>{{name}}</p>
         <p>Favorite Food: <input type="text" ng-model="food"></p>
         <p>{{food}}</p>
-    </div>
+    </div> -->
 
     <!-- APPLICATIONS -->
     <!-- Modules define AngularJS Applications -->
@@ -39,10 +40,14 @@
         </div>
         
         <script>
+            // use Angular's object MODULE method
+            // first param is the name of the app, second param are dependencies, but this has none, so it's an empty array
             var app = angular.module('myApp', []);
+            // controller method assigned to module
+            // $scope is an Angular object passed to the controller function by angular framework, model is attached to scope object to be available in the view
             app.controller('myCtrl', function($scope) {
-                $scope.firstName= "John";
-                $scope.lastName= "Doe";
+                $scope.firstName= "Caroline";
+                $scope.lastName= "Brownlee";
             });
         </script>
 
